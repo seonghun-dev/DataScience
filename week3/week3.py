@@ -15,3 +15,10 @@ print("final = ", mean_final)
 
 cov = ((midterm - mean_midterm) * (final - mean_final)).mean()
 print("cov = ", cov)
+
+
+std_midterm = midterm.std()
+std_final = final.std()
+corr = cov / (std_midterm * std_final) #correlation
+
+print('correaltion = ', corr)
