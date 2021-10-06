@@ -1,7 +1,7 @@
+#건국대학교 스마트ICT융합공학과 201914308
 import pandas as pd
 import numpy as np
 import matplotlib
-
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 
@@ -44,6 +44,7 @@ plt.title('score')
 
 plt.suptitle('Percentile Plot')
 plt.show()
+
 # (5) boxplot (midterm, final, score 각각)
 plt.subplot(221)
 plt.boxplot(midterm)
