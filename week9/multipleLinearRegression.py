@@ -86,13 +86,13 @@ def gradient_descent_naive(x, y):
 
 
 start_time = time.time()
-# m1, m2, m3, c = gradient_descent_naive(X, y)
+m1, m2, m3, c = gradient_descent_naive(X, y)
 end_time = time.time()
 
 print("%f seconds" % (end_time - start_time))
 
 print("\n\n final:")
-# print("gdn_m1 = %f,gdn_m2 = %f,gdn_m3 = %f gdn_c=%f" % (m1, m2, m3, c))
+print("gdn_m1 = %f,gdn_m2 = %f,gdn_m3 = %f gdn_c=%f" % (m1, m2, m3, c))
 print("ls_m1 = %f,ls_m2 = %f,ls_m3 = %f ls_c=%f" % (ls_m1, ls_m2, ls_m3, ls_c))
 
 
