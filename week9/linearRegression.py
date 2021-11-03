@@ -86,3 +86,42 @@ print("%f seconds" % (end_time - start_time))
 print("\n\n final:")
 print("gd_m = %f, gd_c=%f" % (m, c))
 print("ls_m = %f ls_c = %f" % (ls_m, ls_c))
+
+
+def gradient_descent_vector(x, y):
+    epochs = 100000
+    min_grad = 0.0001
+    learning_rate = 0.001
+
+    m = 0.0
+    c = 0.0
+
+    n = len(y)
+
+    c_grad = 0.0
+    m_grad = 0.0
+
+    for epochs in range(epochs):
+
+        y_pred = m * x + c
+        m_grad = (2 * (y_pred - y) * x).sum() / n
+        c_grad = (2 * (y_pred - y)).sum() / n
+
+        m = m - learning_rate * m_grad
+        c = c - learning_rate * c_grad
+
+        if epochs % 1000 == 0:
+            print("epoch : %d m_grad = %f c_grad=%f m=%f c=%f" % (epochs, m_grad, c_grad, m, c))
+        if abs(m_grad) < min_grad and abs(c_grad) < min_grad:
+            break
+    return m, c
+
+start_time = time.time()
+m, c = gradient_descent_vector(x, y)
+end_time = time.time()
+
+print("%f seconds" % (end_time - start_time))
+
+print("\n\n final:")
+print("gdv_m = %f, gdv_c=%f" % (m, c))
+print("lsv_m = %f lsv_c = %f" % (ls_m, ls_c))
