@@ -60,33 +60,3 @@ print("Decision Tree precision = %f" % prec)
 print("Decision Tree recall = %f " % rec)
 print("Decision Tree f1_score = %f" % f1)
 
-# kfold cross validation
-from sklearn.model_selection import KFold
-
-kf = KFold(n_splits=5, random_state=42, shuffle=True)
-accuracy = []
-precision = []
-recall = []
-f1_score = []
-
-for train_index, test_index in kf.split(x):
-    x_train, x_test = x[train_index], x[test_index]
-    y_train, y_test = y[train_index], y[test_index]
-
-    dtree = tree.DecisionTreeClassifier()
-    dtree_model = dtree.fit(x_train, y_train)
-    y_predict = dtree_model.predict(x_test)
-    acc, prec, rec, f1 = classificationPerformanceEval(y_test, y_predict)
-
-
-    accuracy.append(acc)
-    precision.append(prec)
-    recall.append(rec)
-    f1_score.append(f1)
-
-import statistics
-
-print("average accuracy = ", statistics.mean(accuracy))
-print("average precision = ", statistics.mean(precision))
-print("average recall = ", statistics.mean(recall))
-print("average f1_score = ", statistics.mean(f1_score))
