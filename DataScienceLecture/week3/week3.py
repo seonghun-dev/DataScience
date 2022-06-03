@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 
 xlfile = "./score.xlsx"
 
@@ -16,9 +15,8 @@ print("final = ", mean_final)
 cov = ((midterm - mean_midterm) * (final - mean_final)).mean()
 print("cov = ", cov)
 
-
 std_midterm = midterm.std()
 std_final = final.std()
-corr = cov / (std_midterm * std_final) #correlation
+corr = cov / (std_midterm * std_final)  # correlation
 
 print('correaltion = ', corr)

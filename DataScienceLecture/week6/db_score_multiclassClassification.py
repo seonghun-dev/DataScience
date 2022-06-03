@@ -1,7 +1,9 @@
+import warnings
+
 import numpy as np
 import pymysql
 from sklearn.metrics import classification_report
-import warnings
+
 warnings.filterwarnings('ignore')
 
 

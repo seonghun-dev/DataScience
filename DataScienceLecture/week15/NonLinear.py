@@ -11,8 +11,10 @@ from tensorflow import initializers
 def gen_sequential_model():
     model = Sequential([
         Input(4, name='input_layer'),
-        Dense(16, activation='sigmoid', name='hidden_layer1', kernel_initializer=initializers.RandomNormal(mean=0.0, stddev=0.05, seed=42)),
-        Dense(1, activation='relu', name='output_layer', kernel_initializer=initializers.RandomNormal(mean=0.0, stddev=0.05, seed=42))
+        Dense(16, activation='sigmoid', name='hidden_layer1',
+              kernel_initializer=initializers.RandomNormal(mean=0.0, stddev=0.05, seed=42)),
+        Dense(1, activation='relu', name='output_layer',
+              kernel_initializer=initializers.RandomNormal(mean=0.0, stddev=0.05, seed=42))
     ])
 
     model.summary()

@@ -1,5 +1,3 @@
-import networkx as nx
-import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 from nltk import word_tokenize, FreqDist
@@ -65,4 +63,3 @@ get_range_wc(df4)
 
 df5 = all_patents_df[all_patents_df['firstCreatedAt'].isin(range5)]
 get_range_wc(df5)
-

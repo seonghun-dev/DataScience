@@ -7,7 +7,6 @@ from sklearn.tree import DecisionTreeClassifier, export_graphviz
 
 df = pd.read_csv('data_week13.csv', index_col=0)
 df['Species'] = df['Species'].map({'setosa': 0, 'versicolor': 1, 'virginica': 2})
-
 X, y = np.array(df[df.columns.difference(['Species'])]), np.array(df['Species'])
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)

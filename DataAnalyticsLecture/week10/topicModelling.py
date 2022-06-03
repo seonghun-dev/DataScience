@@ -1,11 +1,10 @@
 import pandas as pd
-from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.decomposition import LatentDirichletAllocation
+from sklearn.feature_extraction.text import CountVectorizer
 
 # Load data
 df = pd.read_csv('data_week10.txt', header=None)
 data = sum(df.values.tolist(), [])
-
 
 for topic_num in range(2, 6):
     count_vect = CountVectorizer(max_df=0.95, max_features=1000,

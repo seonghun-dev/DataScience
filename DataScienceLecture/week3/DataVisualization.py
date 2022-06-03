@@ -1,7 +1,8 @@
-#건국대학교 스마트ICT융합공학과 201914308
-import pandas as pd
-import numpy as np
+# 건국대학교 스마트ICT융합공학과 201914308
 import matplotlib
+import numpy as np
+import pandas as pd
+
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 

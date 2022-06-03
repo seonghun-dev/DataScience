@@ -59,4 +59,3 @@ print("Decision Tree accuracy = %f " % acc)
 print("Decision Tree precision = %f" % prec)
 print("Decision Tree recall = %f " % rec)
 print("Decision Tree f1_score = %f" % f1)
-
